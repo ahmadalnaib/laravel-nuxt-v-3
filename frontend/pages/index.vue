@@ -1,7 +1,11 @@
 <script setup >
 
-const {data:posts}=await useFetch('http://localhost:8000/api/posts')
 
+
+// const {data:posts}=await useFetch('http://localhost:8000/api/posts')
+// const nuxtApp=useNuxt()
+
+const posts=await useNuxtApp().$apiFetch('/api/posts')
 </script>
 
 <template>

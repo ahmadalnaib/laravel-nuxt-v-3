@@ -16,5 +16,11 @@
 const title = useState('title', () => 'Default Title')
 const route = useRoute()
 
-const { data: post } = await useFetch(`http://localhost:8000/api/posts/${route.params.id}`)
+// const { data: post } = await useFetch(`http://localhost:8000/api/posts/${route.params.id}`)
+
+
+const post=await useNuxtApp().$apiFetch(`/api/posts/${route.params.id}`)
+
+
+
 </script>
